@@ -1,0 +1,19 @@
+{
+  "kode_kendaraan": "K-01",
+  "kendaraan": "Truk tronton",
+  "trayek": "Jakarta – Cilegon",
+  "jenis_bbm": "Biosolar",
+  "harga_per_liter": 6800,
+  "efisiensi_acuan": 3.0,
+  "jumlah_hari": 1,
+  "jumlah_trip": 1,
+  "total_km": 126.8,
+  "total_liter": 44.4,
+  "total_biaya": 301659,
+  "liter_idle": 1.8,
+  "liter_boros": 2.1,
+  "biaya_boros": 14275,
+  "catatan": "Data simulasi, bukan rekaman kendaraan sungguhan.",
+  "malam_trip": 1,
+  "malam_km_per_liter": 2.86
+}
