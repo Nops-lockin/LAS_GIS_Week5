@@ -10,7 +10,7 @@ const pointLayerGroup = L.layerGroup().addTo(map);
 let allGpsRows = [];
 
 // 2. Memuat ringkasan.json (Statistik Agregat)
-fetch('./K-01_truk-tronton/data/ringkasan.json')
+fetch('./data/ringkasan.json')
   .then((res) => {
     if (!res.ok) throw new Error('File ringkasan.json tidak ditemukan');
     return res.json();
@@ -28,7 +28,7 @@ fetch('./K-01_truk-tronton/data/ringkasan.json')
   });
 
 // 3. Memuat rute.geojson (LineString Rute & Kartu Trip)
-fetch('./K-01_truk-tronton/data/rute.geojson')
+fetch('./data/rute.geojson')
   .then((res) => {
     if (!res.ok) throw new Error('File rute.geojson tidak ditemukan');
     return res.json();
@@ -143,7 +143,7 @@ fetch('./K-01_truk-tronton/data/rute.geojson')
   });
 
 // 4. Memuat titik_ujung.geojson (Marker Asal & Tujuan)
-fetch('./K-01_truk-tronton/data/titik_ujung.geojson')
+fetch('./data/titik_ujung.geojson')
   .then((res) => {
     if (!res.ok) throw new Error('File titik_ujung.geojson tidak ditemukan');
     return res.json();
@@ -170,7 +170,7 @@ fetch('./K-01_truk-tronton/data/titik_ujung.geojson')
   });
 
 // 5. Memuat gps_mentah.csv via PapaParse & Fungsi Render Titik
-Papa.parse('./K-01_truk-tronton/data/gps_mentah.csv', {
+Papa.parse('./data/gps_mentah.csv', {
   download: true,
   header: true,
   dynamicTyping: true,
