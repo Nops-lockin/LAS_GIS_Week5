@@ -99,23 +99,21 @@ Dataset: K-01\_truk-tronton
 
 &#x09;Folder-Proyek/
 
-&#x09;├── HTML.html  (atau index.html)
+&#x09;├── index.html  (atau index.html)
 
-&#x09;├── Main.js
+&#x09;├── main.js
 
-&#x09;├── CSS.css
+&#x09;├── style.css
 
-&#x09;└── K-01\_truk-tronton/
+&#x20;└── data/
 
-&#x20;   		└── data/
+&#x20;      ├── gps\_mentah.csv
 
-&#x20;       		├── gps\_mentah.csv
+&#x20;      ├── ringkasan.json
 
-&#x20;       		├── ringkasan.json
+&#x20;      ├── rute.geojson
 
-&#x20;       		├── rute.geojson
-
-&#x20;       		└── titik\_ujung.geojson
+&#x20;      └── titik\_ujung.geojson
 
 
 
