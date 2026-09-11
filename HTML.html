@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transportation Tracker — Konsumsi BBM Logistik</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- CSS Kustom -->
+  <link rel="stylesheet" href="CSS" />
+</head>
+<body>
+
+  <!-- TOMBOL TOGGLE SIDEBAR (Floating) -->
+  <button id="toggle-sidebar" title="Tutup Sidebar">✕</button>
+
+  <!-- SIDEBAR KIRI (Panel Telematika Gelap) -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h2>Konsumsi BBM per Perjalanan</h2>
+      <p id="truck-desc">Truk tronton, koridor Jakarta - Cilegon, Maret 2025.</p>
+    </div>
+
+    <!-- Ringkasan Angka Utama -->
+    <div class="stat-row">
+      <div class="stat-item">
+        <h3 id="stat-km">0</h3>
+        <span>Kilometer</span>
+      </div>
+      <div class="stat-item">
+        <h3 id="stat-liter">0</h3>
+        <span>Liter</span>
+      </div>
+      <div class="stat-item">
+        <h3 id="stat-cost">Rp 0</h3>
+        <span>Biaya BBM</span>
+      </div>
+    </div>
+
+    <!-- Kartu Pemborosan BBM -->
+    <div class="waste-card">
+      <h3 id="waste-cost">Rp 0</h3>
+      <p id="waste-desc">Memuat data pemborosan bahan bakar...</p>
+    </div>
+
+    <!-- Fitur Filter Titik Pantau -->
+    <div class="filter-section">
+      <label for="filter-select">Tampilkan Titik:</label>
+      <select id="filter-select" class="filter-select">
+        <option value="all">Semua Titik (380 titik)</option>
+        <option value="idle">Titik Idle (0 km/jam)</option>
+        <option value="moving">Titik Bergerak (> 0 km/jam)</option>
+        <option value="none">Sembunyikan Titik</option>
+      </select>
+    </div>
+
+    <!-- Daftar Card Trip -->
+    <div class="trip-list" id="trip-container"></div>
+
+    <!-- Legenda Sidebar -->
+    <div class="sidebar-legend">
+      <h5>Legenda Efisiensi & Titik</h5>
+      <div class="legend-row">
+        <span class="legend-bar" style="background: #3F00FF;"></span>
+        <span>Jalur Rute Utama (Tol & Arteri)</span>
+      </div>
+      <div class="legend-row">
+        <span class="legend-dot" style="background: #ef4444;"></span>
+        <span>Titik Berhenti / Idle (0 km/jam)</span>
+      </div>
+      <div class="legend-row">
+        <span class="legend-dot" style="background: #10b981;"></span>
+        <span>Titik Bergerak (> 0 km/jam)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTAINER PETA -->
+  <main id="map"></main>
+
+  <!-- Pustaka Pihak Ketiga -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+  <!-- Logika Aplikasi Utama -->
+  <script src="Main.js"></script>
+</body>
+</html>
